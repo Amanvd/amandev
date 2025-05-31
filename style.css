@@ -582,6 +582,127 @@ button:hover, .lstb2:hover {
   }
 }
 
+@media (max-width: 500px) {
+  body, html {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .dev {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  main {
+    flex-direction: column;
+    margin: 100px 20px;
+    gap: 20px;
+  }
+
+  .min1 {
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .contact {
+    flex-direction: row;
+    left: auto;
+    top: auto;
+    position: relative;
+    margin-top: 30px;
+    gap: 15px;
+    max-width: 90%;
+  }
+
+  .btn{
+           width: 100%;
+        max-width: 300px;
+        font-size: 16px;
+        justify-content: center;
+        margin-bottom: 10px;
+      
+    
+  }
+  .btn1{
+            width: 100%;
+        max-width: 300px;
+        font-size: 16px;
+        justify-content: center;
+        margin-bottom: 10px;
+  }
+
+  .idea1 {
+    flex-direction: column;
+    padding: 20px;
+    gap: 30px;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .ideatwo {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+  }
+
+  .boxes {
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .box1 {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .viewmyprojects {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  input, textarea {
+    width: 100% !important;
+  }
+
+  .lstbtn {
+    justify-content: center;
+  }
+
+  .lstb2 {
+    width: 100px;
+  }
+
+  #scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px;
+  }
+  ul{
+    margin-left: 9px;
+  }
+}
+
+
 
 
 
