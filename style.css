@@ -31,6 +31,14 @@ color: aliceblue;
 } */
 .dev{
     margin-left: 125px;
+    font-family: 'Poppins', sans-serif;
+  font-weight: 800; /* Extra bold */
+  font-size: 28px;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #00ffe7, #00aaff, #0055ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 .bitmoji{
@@ -304,14 +312,20 @@ hr{
     max-width: 1000px;
     margin-left: 10px;
     background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0));
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255,255,255,0.1);
-      padding: 5px;
+     border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    padding: 5px;
+    background: linear-gradient(to right, #a18cd1, #fbc2eb);
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
     
 }
 .experience2{
  position: relative;
  left: 10px;
+  background: linear-gradient(to right, #ff6b6b, #f06595, #cc5de8);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
  
 }
 .viewmyprojects{
