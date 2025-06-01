@@ -1,11 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Projects Showcase</title>
   <style>
-    /* Reset */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -63,7 +62,7 @@
       width: 100%;
       height: 180px;
       object-fit: cover;
-      border-bottom: 3px solid #2563eb; /* nice blue accent */
+      border-bottom: 3px solid #2563eb;
       transition: filter 0.3s ease;
     }
 
@@ -82,7 +81,7 @@
     .project-title {
       font-size: 1.25rem;
       font-weight: 700;
-      color: #2563eb; /* blue */
+      color: #2563eb;
       margin-bottom: 12px;
       letter-spacing: 0.05em;
     }
@@ -109,7 +108,6 @@
       box-shadow: 0 5px 10px rgba(37, 99, 235, 0.3);
       transition: background 0.3s ease;
       text-decoration: none;
-      user-select: none;
     }
 
     .project-btn:hover {
@@ -117,7 +115,6 @@
       box-shadow: 0 8px 20px rgba(30, 64, 175, 0.6);
     }
 
-    /* Responsive */
     @media (max-width: 480px) {
       .project-image {
         height: 140px;
@@ -128,31 +125,67 @@
 <body>
 
   <h1>My Projects</h1>
-
-  <div class="projects-grid">
-    <!-- Example Project Card -->
-     <div class="project-card" tabindex="0" role="button" onclick="openProject('projects/Netflix-clone/index.html')">
-      <img class="project-image" src="assets/previewnetflix.png" alt="Netflix Clone Project Preview" />
-      <div class="project-content">
-        <h2 class="project-title">Netflix Clone</h2>
-        <p class="project-description">
-          A fully responsive Netflix clone built with React and styled-components.
-        </p>
-        <a href="projects/Netflix-clone/index.html" target="_blank" rel="noopener noreferrer" class="project-btn" onclick="event.stopPropagation()">View Project</a>
-      </div>
-    </div>
-
-     
-    
-
-  
-  </div>
+  <div class="projects-grid" id="projectsGrid"></div>
 
   <script>
-    function openProject(url) {
-      window.open(url, '_blank');
-    }
-  </script>
-</body>
-</html> 
+    const projects = [
+      {
+        title: "Netflix Clone",
+        description: "A fully responsive Netflix clone built with React and styled-components.",
+        image: "assets/previewnetflix.png",
+        url: "projects/Netflix-clone/index.html"
+      },
+      {
+        title: "Weather App",
+        description: "A weather forecasting app using OpenWeatherMap API with real-time data.",
+        image: "assets/previewweather.png",
+        url: "projects/WeatherApp/index.html"
+      },
+      {
+        title: "To-Do List",
+        description: "A simple, elegant to-do list app with local storage support.",
+        image: "assets/previewtodo.png",
+        url: "projects/TodoApp/index.html"
+      }
+      // Add more projects here...
+    ];
 
+    const grid = document.getElementById("projectsGrid");
+
+    projects.forEach(project => {
+      const card = document.createElement("div");
+      card.className = "project-card";
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
+      card.setAttribute("data-url", project.url);
+      card.onclick = () => window.open(project.url, "_blank");
+
+      card.innerHTML = `
+        <img class="project-image" src="${project.image}" alt="Screenshot of ${project.title}" loading="lazy" />
+        <div class="project-content">
+          <h2 class="project-title">${project.title}</h2>
+          <p class="project-description">${project.description}</p>
+          <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-btn" onclick="event.stopPropagation()">View Project</a>
+        </div>
+      `;
+
+      // Keyboard access (Enter key)
+      card.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") window.open(project.url, "_blank");
+      });
+
+      grid.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+<!-- {
+  title: "My New Project",
+  description: "Brief description of what it does.",
+  image: "assets/previewnew.png",
+  url: "projects/MyNewProject/index.html"
+} -->
