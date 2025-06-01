@@ -12,7 +12,7 @@ margin: 0;
 }
 
 html{
-
+ scroll-behavior: smooth;
 /* background: #020024; */
 /* background: radial-gradient(circle, #0f4c5c 0%, #0a0f1a 100%); */
 /* background: radial-gradient(circle, #072f39 0%, #050a0e 100%); */

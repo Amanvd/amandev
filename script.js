@@ -37,3 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.classList.toggle("dark-mode");
     });
 });
+
+
+
+
+// Opens the project URL in a new tab when the card is clicked
+function openProject(url) {
+  window.open(url, '_blank');
+}
+
+// Optional: Add keyboard accessibility so that pressing Enter on the focused card opens the project
+document.querySelectorAll('.project-card').forEach(card => {
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const link = card.querySelector('a.project-btn');
+      if (link) {
+        window.open(link.href, '_blank');
+      }
+    }
+  });
+});
